@@ -21,7 +21,9 @@ rootProject.allprojects {
 
 apply plugin: 'com.android.library'
 
-android {
+android {  if (project.android.hasProperty("namespace")) {
+        namespace = "net.nyx.nyxprinter.nyx_printer"
+    }
     compileSdkVersion 31
 
     compileOptions {
